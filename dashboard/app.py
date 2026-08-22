@@ -4,7 +4,12 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
-from dashboard.api_client import APIError,get,post
+
+try:
+    from dashboard.api_client import APIError, get, post
+except ModuleNotFoundError:
+    # Streamlit Community Cloud executes dashboard/app.py with dashboard/ on sys.path.
+    from api_client import APIError, get, post
 
 ROOT=Path(__file__).resolve().parents[1]
 st.set_page_config(page_title='E-Commerce Intelligence Platform',page_icon='🛒',layout='wide')

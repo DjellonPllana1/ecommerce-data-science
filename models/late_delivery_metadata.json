@@ -1,0 +1,55 @@
+{
+  "model_name": "LogisticRegression",
+  "features": [
+    "purchase_month",
+    "purchase_day_of_week",
+    "purchase_hour",
+    "customer_zip_region",
+    "item_value",
+    "freight_value",
+    "item_count",
+    "unique_products",
+    "seller_count",
+    "total_product_weight_g",
+    "average_product_length_cm",
+    "average_product_height_cm",
+    "average_product_width_cm",
+    "payment_value",
+    "payment_installments",
+    "estimated_delivery_window_days",
+    "customer_state",
+    "dominant_product_category",
+    "dominant_seller_state",
+    "same_customer_seller_state",
+    "payment_type"
+  ],
+  "threshold": 0.55,
+  "created_at_utc": "2026-08-22T14:46:39.505239+00:00",
+  "training_date_range": {
+    "start": "2016-09-15T12:16:38",
+    "end": "2018-04-15T20:12:35"
+  },
+  "validation_date_range": {
+    "start": "2018-04-15T20:17:11",
+    "end": "2018-06-21T08:29:29"
+  },
+  "test_date_range": {
+    "start": "2018-06-21T08:41:07",
+    "end": "2018-08-29T15:00:37"
+  },
+  "dataset_rows": 96470,
+  "target_prevalence": 0.08112366538820359,
+  "test_metrics": {
+    "pr_auc": 0.11316110412202061,
+    "roc_auc": 0.6574285206610304,
+    "precision": 0.09962406015037593,
+    "recall": 0.664576802507837,
+    "f1": 0.17327339599509603,
+    "balanced_accuracy": 0.6196200573143003,
+    "tn": 7766,
+    "fp": 5748,
+    "fn": 321,
+    "tp": 636
+  },
+  "leakage_audit_passed": true
+}

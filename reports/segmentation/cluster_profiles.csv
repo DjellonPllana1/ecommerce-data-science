@@ -1,0 +1,3 @@
+cluster_id,customer_count,median_recency,median_frequency,median_monetary,mean_monetary,total_revenue,repeat_customer_rate,customer_percentage,revenue_share,top_customer_states,cluster_name
+0,92102,226.0,1.0,105.65,161.21911456863043,14848602.89,0.0,96.95967996631224,94.34191265102913,"SP, RJ, MG",One-Time Customers
+1,2888,206.5,2.0,225.53,308.3566897506925,890534.12,1.0,3.0403200336877565,5.658087348970857,"SP, RJ, MG",Repeat High-Value Customers

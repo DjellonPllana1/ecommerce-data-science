@@ -1,0 +1,232 @@
+{
+  "frequency": "daily",
+  "features": [
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "lag_7",
+    "lag_14",
+    "lag_28",
+    "rolling_mean_7",
+    "rolling_mean_14",
+    "rolling_mean_28",
+    "rolling_std_7",
+    "rolling_std_28",
+    "day_of_week",
+    "day_of_month",
+    "month",
+    "quarter",
+    "week_of_year",
+    "is_weekend",
+    "time_index"
+  ],
+  "horizons": [
+    7,
+    14,
+    30
+  ],
+  "full_historical_range": [
+    "2016-09-04",
+    "2018-09-03"
+  ],
+  "modeling_range": [
+    "2017-01-01",
+    "2018-08-21"
+  ],
+  "full_observations": 730,
+  "modeling_observations": 598,
+  "total_revenue": 15739137.01,
+  "folds": {
+    "daily_orders": [
+      {
+        "train_start": "2017-01-01",
+        "train_end": "2018-04-23",
+        "validation_start": "2018-04-24",
+        "validation_end": "2018-05-23"
+      },
+      {
+        "train_start": "2017-01-01",
+        "train_end": "2018-05-23",
+        "validation_start": "2018-05-24",
+        "validation_end": "2018-06-22"
+      },
+      {
+        "train_start": "2017-01-01",
+        "train_end": "2018-06-22",
+        "validation_start": "2018-06-23",
+        "validation_end": "2018-07-22"
+      }
+    ],
+    "daily_revenue": [
+      {
+        "train_start": "2017-01-01",
+        "train_end": "2018-04-23",
+        "validation_start": "2018-04-24",
+        "validation_end": "2018-05-23"
+      },
+      {
+        "train_start": "2017-01-01",
+        "train_end": "2018-05-23",
+        "validation_start": "2018-05-24",
+        "validation_end": "2018-06-22"
+      },
+      {
+        "train_start": "2017-01-01",
+        "train_end": "2018-06-22",
+        "validation_start": "2018-06-23",
+        "validation_end": "2018-07-22"
+      }
+    ]
+  },
+  "selected_models": {
+    "daily_orders": "RandomForestRegressor",
+    "daily_revenue": "HistGradientBoostingRegressor"
+  },
+  "backtest_metrics": {
+    "daily_orders": {
+      "HistGradientBoostingRegressor": {
+        "mae": 48.64815060173104,
+        "rmse": 60.89425499754003,
+        "mape": 25.45535780714107,
+        "smape": 25.269153778707445
+      },
+      "HistoricalMean": {
+        "mae": 67.0965021296363,
+        "rmse": 80.11734516285792,
+        "mape": 29.393687243493975,
+        "smape": 34.31445062141506
+      },
+      "LinearRegression": {
+        "mae": 78.82679721952648,
+        "rmse": 90.65921459343927,
+        "mape": 47.04963965436408,
+        "smape": 34.52217882089059
+      },
+      "NaiveLastValue": {
+        "mae": 56.68888888888889,
+        "rmse": 66.90477124876091,
+        "mape": 29.293612246899443,
+        "smape": 28.73694979414499
+      },
+      "RandomForestRegressor": {
+        "mae": 40.69723585519421,
+        "rmse": 52.24429944807151,
+        "mape": 23.72224162627748,
+        "smape": 20.330879611317595
+      },
+      "RollingMean7": {
+        "mae": 48.7834810313835,
+        "rmse": 59.00035094879998,
+        "mape": 26.792455601939494,
+        "smape": 24.291097265942835
+      },
+      "SeasonalNaive7": {
+        "mae": 44.12222222222223,
+        "rmse": 55.885656742788775,
+        "mape": 24.882264946882326,
+        "smape": 22.22250650248641
+      }
+    },
+    "daily_revenue": {
+      "HistGradientBoostingRegressor": {
+        "mae": 8024.505629148978,
+        "rmse": 9825.604447979864,
+        "mape": 27.168798974907535,
+        "smape": 23.481901614256827
+      },
+      "HistoricalMean": {
+        "mae": 11879.468398834424,
+        "rmse": 14326.679832123393,
+        "mape": 31.398959822054042,
+        "smape": 37.02940241980039
+      },
+      "LinearRegression": {
+        "mae": 12826.440128802229,
+        "rmse": 14914.333328798972,
+        "mape": 46.59081693706278,
+        "smape": 33.948430403763155
+      },
+      "NaiveLastValue": {
+        "mae": 10015.217333333334,
+        "rmse": 11914.046927454261,
+        "mape": 31.163547962187717,
+        "smape": 31.60658631979965
+      },
+      "RandomForestRegressor": {
+        "mae": 8482.86979810566,
+        "rmse": 10405.043859650366,
+        "mape": 27.1463707086117,
+        "smape": 25.569424027093618
+      },
+      "RollingMean7": {
+        "mae": 8459.167702889225,
+        "rmse": 10563.752630546851,
+        "mape": 27.274900586028096,
+        "smape": 25.3751200542513
+      },
+      "SeasonalNaive7": {
+        "mae": 8424.681222222223,
+        "rmse": 10241.383538346943,
+        "mape": 27.89778549159854,
+        "smape": 25.934839443216102
+      }
+    }
+  },
+  "holdout_metrics": {
+    "daily_orders": {
+      "7": {
+        "mae": 12.178035497835525,
+        "rmse": 16.626391029862763,
+        "mape": 5.9060154225114845,
+        "smape": 5.622627954369748
+      },
+      "14": {
+        "mae": 37.334747052947044,
+        "rmse": 49.4147939687642,
+        "mape": 13.675580889213926,
+        "smape": 15.086318106281897
+      },
+      "30": {
+        "mae": 43.02610836533835,
+        "rmse": 55.702832854112145,
+        "mape": 14.879759830265368,
+        "smape": 16.63261577923284
+      }
+    },
+    "daily_revenue": {
+      "7": {
+        "mae": 4087.5116864494526,
+        "rmse": 4661.65761550917,
+        "mape": 10.645932421710524,
+        "smape": 11.286873472962233
+      },
+      "14": {
+        "mae": 7453.309467233465,
+        "rmse": 8826.354229362105,
+        "mape": 17.054661530364474,
+        "smape": 19.23289777226956
+      },
+      "30": {
+        "mae": 7720.60402427584,
+        "rmse": 9349.153418839429,
+        "mape": 17.137543552582365,
+        "smape": 19.31814001304605
+      }
+    }
+  },
+  "uncertainty": {
+    "orders": [
+      -104.95024877955372,
+      89.5409687728938
+    ],
+    "revenue": [
+      -16268.516414356633,
+      15197.501173783528
+    ]
+  },
+  "limitations": [
+    "Sparse 2016 launch period and right-censored 2018-08-22 through 2018-09-03 tail excluded from modeling",
+    "No promotions, holidays, marketing, traffic, or macroeconomic regressors",
+    "Intervals use empirical backtest residuals and heuristic horizon widening"
+  ]
+}

@@ -1,0 +1,22 @@
+feature,available_at_prediction_time,rationale
+purchase_month,True,Known from purchase timestamp.
+purchase_day_of_week,True,Known from purchase timestamp.
+purchase_hour,True,Known from purchase timestamp.
+customer_zip_region,True,Coarse region derived from the known customer ZIP prefix.
+item_value,True,Sum of ordered item prices known at purchase.
+freight_value,True,Quoted order-item freight known at purchase.
+item_count,True,Basket composition known at purchase.
+unique_products,True,Basket composition known at purchase.
+seller_count,True,Sellers fulfilling the basket are known at purchase.
+total_product_weight_g,True,Catalog attributes known before fulfillment.
+average_product_length_cm,True,Catalog attributes known before fulfillment.
+average_product_height_cm,True,Catalog attributes known before fulfillment.
+average_product_width_cm,True,Catalog attributes known before fulfillment.
+payment_value,True,Order payment total known shortly after purchase.
+payment_installments,True,Checkout payment plan known at purchase.
+estimated_delivery_window_days,True,Platform estimate shown at purchase; no actual delivery data.
+customer_state,True,Shipping/customer location known at purchase.
+dominant_product_category,True,Category of ordered products known at purchase.
+dominant_seller_state,True,Registered seller location known at purchase.
+same_customer_seller_state,True,Derived only from known customer/seller states.
+payment_type,True,Chosen during checkout.

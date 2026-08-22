@@ -1,0 +1,1 @@
+"""RFM customer segmentation package."""

@@ -1,0 +1,10 @@
+rfm_segment,One-Time Customers,Repeat High-Value Customers
+At Risk,0.0,1.0
+Champions,0.0,1.0
+Hibernating,1.0,0.0
+High Value At Risk,0.9469158372266233,0.053084162773376666
+Loyal Customers,0.0,1.0
+Needs Attention,0.9697289315473051,0.030271068452694862
+New Customers,1.0,0.0
+Potential Loyalists,0.0,1.0
+Promising,1.0,0.0

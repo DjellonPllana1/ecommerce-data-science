@@ -1,0 +1,51 @@
+{
+  "reference_date": "2018-09-04T00:00:00",
+  "selected_k": 2,
+  "features": [
+    "recency",
+    "frequency",
+    "monetary"
+  ],
+  "transformations": "log1p each RFM feature, then StandardScaler",
+  "cluster_names": {
+    "1": "Repeat High-Value Customers",
+    "0": "One-Time Customers"
+  },
+  "cluster_profiles": [
+    {
+      "cluster_id": 0,
+      "customer_count": 92102,
+      "median_recency": 226.0,
+      "median_frequency": 1.0,
+      "median_monetary": 105.65,
+      "mean_monetary": 161.21911456863043,
+      "total_revenue": 14848602.89,
+      "repeat_customer_rate": 0.0,
+      "customer_percentage": 96.95967996631224,
+      "revenue_share": 94.34191265102913,
+      "top_customer_states": "SP, RJ, MG",
+      "cluster_name": "One-Time Customers"
+    },
+    {
+      "cluster_id": 1,
+      "customer_count": 2888,
+      "median_recency": 206.5,
+      "median_frequency": 2.0,
+      "median_monetary": 225.53,
+      "mean_monetary": 308.3566897506925,
+      "total_revenue": 890534.12,
+      "repeat_customer_rate": 1.0,
+      "customer_percentage": 3.0403200336877565,
+      "revenue_share": 5.658087348970857,
+      "top_customer_states": "SP, RJ, MG",
+      "cluster_name": "Repeat High-Value Customers"
+    }
+  ],
+  "silhouette_score": 0.7081375253576047,
+  "pca_explained_variance": [
+    0.3885848693397196,
+    0.33296163467604495
+  ],
+  "customer_count": 94990,
+  "monetary_total": 15739137.010000002
+}

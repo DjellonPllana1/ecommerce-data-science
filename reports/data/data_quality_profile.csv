@@ -1,0 +1,5 @@
+dataset,rows,columns,duplicate_rows,duplicate_business_keys,missing_cells,categorical_cardinality
+orders,99441,22,0,0,13805,199700
+items,112650,9,0,0,1603,134866
+reviews,99224,7,0,0,5742,197085
+customers,94990,9,0,0,0,99125

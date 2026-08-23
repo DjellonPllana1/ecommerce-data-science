@@ -48,10 +48,19 @@ def get_engine() -> Engine:
     load_dotenv(PROJECT_ROOT / ".env")
     import os
 
+    database_url = os.getenv("DATABASE_URL")
+    if database_url:
+        # Managed PostgreSQL providers expose a complete connection URL. Keeping
+        # it intact also preserves provider-specific SSL query parameters.
+        return create_engine(database_url, pool_pre_ping=True)
+
     required = ["POSTGRES_DB", "POSTGRES_USER", "POSTGRES_PASSWORD", "POSTGRES_HOST", "POSTGRES_PORT"]
     missing = [name for name in required if not os.getenv(name)]
     if missing:
-        raise RuntimeError(f"Database environment variables are missing: {missing}")
+        raise RuntimeError(
+            "Set DATABASE_URL or provide all PostgreSQL variables; missing: "
+            f"{missing}"
+        )
     database_url = URL.create(
         "postgresql+psycopg2", username=os.getenv("POSTGRES_USER"),
         password=os.getenv("POSTGRES_PASSWORD"), host=os.getenv("POSTGRES_HOST"),

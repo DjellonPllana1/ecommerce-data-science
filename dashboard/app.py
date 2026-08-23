@@ -21,7 +21,9 @@ page=st.sidebar.radio('Navigate',['Executive Overview','Sales Analytics','Custom
 @st.cache_data(ttl=300)
 def api_get(path,**params): return get(path,**params)
 def frame(path,**params): return pd.DataFrame(api_get(path,**params))
-def service_error(exc): st.error(str(exc)); st.info('Start FastAPI with: `uvicorn api.main:app --reload`')
+def service_error(exc):
+    st.error(str(exc))
+    st.info('Check the deployment `DATABASE_URL` secret or the configured `API_BASE_URL`.')
 def kpis(data):
     cols=st.columns(4); cols[0].metric('Revenue',f"R$ {data['total_revenue']:,.0f}"); cols[1].metric('Eligible orders',f"{data['total_eligible_orders']:,}"); cols[2].metric('Unique customers',f"{data['unique_customers']:,}"); cols[3].metric('Average order value',f"R$ {data['average_order_value']:,.2f}")
     cols=st.columns(3); cols[0].metric('Repeat customer rate',f"{data['repeat_customer_rate']:.2f}%"); cols[1].metric('Late-delivery rate',f"{data['late_delivery_rate']:.2f}%"); cols[2].metric('Avg. delivery duration',f"{data['average_delivery_duration_days']:.1f} days")

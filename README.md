@@ -69,7 +69,7 @@ Endpoints include `/health`, five `/analytics/*` routes, `/predict/late-delivery
 
 ## Interactive Dashboard
 
-The Streamlit platform provides Executive Overview, Sales Analytics, Customer Intelligence, Delivery Risk, Sales Forecasting, Model Performance, and About views using live API responses and persisted evidence.
+The Streamlit platform provides Executive Overview, Sales Analytics, Customer Intelligence, Delivery Risk, Sales Forecasting, Model Performance, and About views using live API responses and persisted evidence. In Docker, `API_BASE_URL` points the dashboard at the separate FastAPI service. When that variable is absent (including Streamlit Community Cloud), the dashboard runs the same FastAPI application in-process; configure `DATABASE_URL` as a Streamlit secret for database-backed analytics.
 
 ## Key Business Insights
 
